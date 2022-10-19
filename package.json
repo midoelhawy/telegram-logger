@@ -4,7 +4,8 @@
   "description": "use telegram to monitor your nodejs application",
   "main": "lib/telegram.js",
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "release:patch":"npm version minor && git push --tags"
   },
   "repository": {
     "type": "git",
