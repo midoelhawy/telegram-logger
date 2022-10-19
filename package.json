@@ -1,6 +1,6 @@
 {
   "name": "telegram-logger",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "use telegram to monitor your nodejs application",
   "main": "lib/telegram.js",
   "scripts": {
