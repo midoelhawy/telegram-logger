@@ -17,21 +17,21 @@ Configurate Library by replacing `botToken` with your default bot token and your
     })
 
 
-    logger.info(`This content will be delivired to as info log`, {
+    logger.info(`This content will be delivired to Telegram as info log`, {
         priority: "low"
     })
 
-    logger.success(`This content will be delivired to as success log`, {
+    logger.success(`This content will be delivired to Telegram as success log`, {
         priority: "low"
     })
 
-    logger.error(`This content will be delivired to as error log`, {
+    logger.error(`This content will be delivired to Telegram as error log`, {
         priority: "critical"
     })
 
 
 
-    logger.warning(`This content will be delivired to as warning log`, {
+    logger.warning(`This content will be delivired to Telegram as warning log`, {
         priority: "high"
     })
 
