@@ -1,4 +1,4 @@
-import { Telegram } from './lib/telegram'
+import { Telegram } from './src/lib/telegram'
 
 
 export default Telegram
