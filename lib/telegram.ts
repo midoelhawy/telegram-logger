@@ -26,13 +26,11 @@ export class Telegram {
     i18nTranslation(
         values: Partial<typeof this.i18n>
     ) {
-
         this.i18n = { ...this.i18n, ...values }
-
     }
 
 
-    transalteTypes(
+    translateTypes(
         values: Partial<typeof typeTransaltion>
     ) {
 
@@ -40,7 +38,7 @@ export class Telegram {
 
     }
 
-    transaltePriorites(
+    translatePriorities(
         values: Partial<typeof priorityTransaltion>
     ) {
 
@@ -49,7 +47,7 @@ export class Telegram {
     }
 
 
-    configurateChannels(channels:typeof this.channels){
+    configureChannels(channels:typeof this.channels){
         this.channels = {...this.channels,...channels}
     }
 

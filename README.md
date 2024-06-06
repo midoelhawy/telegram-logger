@@ -1,46 +1,46 @@
 ## **telegram-logger-ts**
 
-simple libreary used to monitor your node application from your telegram channels
+simple library used to monitor your node application from your telegram channels
 
 
 
 ### HOW it works
 
 
-Configurate Library by replacing `botToken` with your default bot token and your `chatId`
-*NOTE: YOU CAN SEPARETE LOGS LEVELS IN DIFFRENT CHANNELS BY DIFFRENT BOTS*
+Configure Library by replacing `botToken` with your default bot token and your `chatId`
+*NOTE: YOU CAN SEPARATE LOGS LEVELS IN DIFFERENT CHANNELS BY DIFFERENT BOTS*
 ```typescript
     const logger = new Telegram({
         defaultBotToken: botToken,// this bot will be used by default to send logs for channels with out configuration
         defaultChatId: chatId, // this chat will be used by default to send logs for channels with out configuration
-        ignoreSendingErrors: true// ignore catched errors 
+        ignoreSendingErrors: true // ignore sending error (NOTE: IN CASE OF ERROR FROM TELEGRAM THE MESSAGE WILL BE IGNORED)
     })
 
 
-    logger.info(`This content will be delivired to Telegram as info log`, {
+    logger.info(`This content will be delivered to Telegram as info log`, {
         priority: "low"
     })
 
-    logger.success(`This content will be delivired to Telegram as success log`, {
+    logger.success(`This content will be delivered to Telegram as success log`, {
         priority: "low"
     })
 
-    logger.error(`This content will be delivired to Telegram as error log`, {
+    logger.error(`This content will be delivered to Telegram as error log`, {
         priority: "critical"
     })
 
 
 
-    logger.warning(`This content will be delivired to Telegram as warning log`, {
+    logger.warning(`This content will be delivered to Telegram as warning log`, {
         priority: "high"
     })
 
 ```
-*NOTE: Telegram frequently ban bots to send messeges if the sending rate is to fast; to avoid this problem you can semply configurate diffrent bot for diffrent channel*
+*NOTE: Telegram frequently ban bots to send messages if the sending rate is to fast; to avoid this problem you can simply configure different bot for different channel*
 
 ```typescript
 
-    logger.configurateChannels({
+    logger.configureChannels({
         debug:{
             chatId:"YOUR_DEBUG_CHAT_ID",
             botToken:"YOUR_DEBUG_BOT_TOKEN"
@@ -65,7 +65,7 @@ Configurate Library by replacing `botToken` with your default bot token and your
 
 ```
 
-Else you can support diffrent language by setting the default keyword
+Else you can support different language by setting the default keyword
 
 ```typescript
 
@@ -75,7 +75,7 @@ Else you can support diffrent language by setting the default keyword
     })
 
 
-    logger.transaltePriorites({
+    logger.translatePriorities({
         critical: "⚫️⚫️ critico ⚫️⚫️",
         high: "🔴🔴 alto 🔴🔴",
         low: "🔵🔵 passo 🔵🔵",
@@ -84,7 +84,7 @@ Else you can support diffrent language by setting the default keyword
 
 
 
-    logger.transalteTypes({
+    logger.translateTypes({
         error: "❌ Errore ",
         debug: "💤 Debug ",
         info: "❕ Info ",
